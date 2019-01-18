@@ -1,4 +1,4 @@
-package com.bfirestone.udacity.cookbook.IdlingRecource;
+package com.bfirestone.udacity.cookbook.IdlingResource;
 
 import android.support.annotation.Nullable;
 import android.support.test.espresso.IdlingResource;

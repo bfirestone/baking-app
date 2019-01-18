@@ -10,15 +10,14 @@
     tools:context="com.bfirestone.udacity.cookbook.ui.activities.RecipeInfoActivity">
 
     <!--
-    This layout is a two-pane layout for the RecipeSteps
+    This layout is a multi-pane layout for the RecipeSteps
     master/detail flow.
-    
     -->
 
     <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/recipe_step_list"
-        android:name="eu.dkaratzas.bakingrecipes.ui.RecipeStepListFragment"
+        android:name="com.bfirestone.udacity.cookbook.ui.RecipeStepListFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"

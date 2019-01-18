@@ -29,23 +29,20 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static junit.framework.Assert.assertNotNull;
 
 @RunWith(AndroidJUnit4.class)
-public class BakingRecipesTests extends BaseTest {
+public class CookBookAppTests extends BaseTest {
 
     @Test
     public void clickRecyclerViewItemHasIntentExtraWithRecipeKey() {
-        //Checks if the key is present
         Intents.init();
 
         Navigation.getMeToRecipeInfo(0);
         intended(hasExtraWithKey(Config.RECIPE_KEY));
 
         Intents.release();
-
     }
 
     @Test
     public void clickOnRecyclerViewItem_opensRecipeInfoActivity() {
-
         Navigation.getMeToRecipeInfo(0);
 
         onView(ViewMatchers.withId(R.id.ingredient_list_text))

@@ -9,7 +9,7 @@ import android.support.test.espresso.IdlingResource;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 
-import com.bfirestone.udacity.cookbook.IdlingRecource.RecipesIdlingResource;
+import com.bfirestone.udacity.cookbook.IdlingResource.RecipesIdlingResource;
 
 public class CookBookApplication extends Application {
     @Nullable

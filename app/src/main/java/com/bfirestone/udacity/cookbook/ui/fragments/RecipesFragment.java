@@ -94,7 +94,7 @@ public class RecipesFragment extends Fragment {
         mNoDataContainer.setVisibility(View.VISIBLE);
         setupRecyclerView();
 
-        // Get the IdlingResource instance
+        // IdlingResource for Testing
         if (getActivity() != null) {
             cookBookApplication = (CookBookApplication) getActivity().getApplicationContext();
             cookBookApplication.setIdleState(false);

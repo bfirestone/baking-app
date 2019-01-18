@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Baking Recipes</string>
+    <string name="app_name">CookBook App</string>
     <string name="servings">Servings: %d</string>
     <string name="recipe_image">Recipe image</string>
     <string name="internet_offline">no internet connection</string>
