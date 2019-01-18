@@ -15,12 +15,10 @@ import android.widget.TextView;
 import com.bfirestone.udacity.cookbook.Config;
 import com.bfirestone.udacity.cookbook.R;
 import com.bfirestone.udacity.cookbook.models.Step;
-import com.bfirestone.udacity.cookbook.ui.activities.RecipeInfoActivity;
-import com.bfirestone.udacity.cookbook.ui.activities.RecipeStepDetailActivity;
 import com.bfirestone.udacity.cookbook.utils.GlideApp;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.google.android.exoplayer2.ExoPlayer;
 import com.google.android.exoplayer2.ExoPlayerFactory;
-import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.source.ExtractorMediaSource;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.trackselection.AdaptiveTrackSelection;
@@ -38,12 +36,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-/**
- * A fragment representing a single RecipeStep detail screen.
- * This fragment is either contained in a {@link RecipeInfoActivity}
- * in two-pane mode (on tablets) or a {@link RecipeStepDetailActivity}
- * on handsets.
- */
+
 public class RecipeStepDetailFragment extends Fragment {
 
     @BindView(R.id.instructions_container)
@@ -58,7 +51,7 @@ public class RecipeStepDetailFragment extends Fragment {
     @BindView(R.id.instruction_text)
     TextView mTvInstructions;
 
-    private SimpleExoPlayer mExoPlayer;
+    private ExoPlayer mExoPlayer;
     private Step mStep;
     private Unbinder unbinder;
 

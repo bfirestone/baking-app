@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bfirestone.udacity.cookbook.Config;
 import com.bfirestone.udacity.cookbook.CookBookApplication;
 import com.bfirestone.udacity.cookbook.R;
 import com.bfirestone.udacity.cookbook.adapters.RecipesAdapter;
@@ -37,14 +38,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link OnRecipeClickListener} interface
- * to handle interaction events.
- */
 public class RecipesFragment extends Fragment {
-    private static String RECIPES_KEY = "recipes";
 
     @BindView(R.id.recipes_recycler_view)
     RecyclerView mRecipesRecyclerView;
@@ -84,7 +78,7 @@ public class RecipesFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View viewRoot = inflater.inflate(R.layout.fragment_recipes, container, false);
+        View viewRoot = inflater.inflate(R.layout.recipes_fragment, container, false);
         unbinder = ButterKnife.bind(this, viewRoot);
 
         Logger.d("fetching recipes");
@@ -100,8 +94,8 @@ public class RecipesFragment extends Fragment {
             cookBookApplication.setIdleState(false);
 
 
-            if (savedInstanceState != null && savedInstanceState.containsKey(RECIPES_KEY)) {
-                mRecipeList = savedInstanceState.getParcelableArrayList(RECIPES_KEY);
+            if (savedInstanceState != null && savedInstanceState.containsKey(Config.SAVED_RECIPES_KEY)) {
+                mRecipeList = savedInstanceState.getParcelableArrayList(Config.SAVED_RECIPES_KEY);
 
                 mRecipesRecyclerView.setAdapter(
                         new RecipesAdapter(getActivity().getApplicationContext(), mRecipeList,
@@ -165,7 +159,7 @@ public class RecipesFragment extends Fragment {
         super.onSaveInstanceState(outState);
 
         if (mRecipeList != null && !mRecipeList.isEmpty())
-            outState.putParcelableArrayList(RECIPES_KEY, (ArrayList<? extends Parcelable>) mRecipeList);
+            outState.putParcelableArrayList(Config.SAVED_RECIPES_KEY, (ArrayList<? extends Parcelable>) mRecipeList);
     }
 
     private void setupRecyclerView() {

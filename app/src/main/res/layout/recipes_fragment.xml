@@ -4,13 +4,14 @@
     android:layout_height="match_parent"
     tools:context="com.bfirestone.udacity.cookbook.ui.fragments.RecipesFragment">
 
-    <include layout="@layout/no_data_layout" />
+    <include layout="@layout/recipes_no_data_layout" />
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/pull_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- TODO: Add Cooking Time -->
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recipes_recycler_view"
             android:layout_width="match_parent"

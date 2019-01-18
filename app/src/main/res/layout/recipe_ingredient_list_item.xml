@@ -6,6 +6,7 @@
 
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_medium"
@@ -37,8 +38,7 @@
         android:id="@+id/title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginTop="8dp"
         android:background="@drawable/round_tv"
         android:paddingStart="@dimen/margin_extra_large"
         android:paddingTop="8dp"
@@ -47,6 +47,7 @@
         android:text="@string/text_ingredient_list"
         android:textColor="@android:color/white"
         android:textSize="@dimen/text_extra_large"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
